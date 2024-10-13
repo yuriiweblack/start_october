@@ -54,3 +54,39 @@ some_dict = {
     3:some_list,
 }
 
+a = {'name': 'John', 'age': 19, 'minor': False}
+b = {1: 2, 2: 3, 'ms': 'a'}
+a['type'] = "people"
+print(a)
+print(a.get('name')) ## prints John
+print(a.items()) # dict with tuples paired keys values
+
+a.pop('name')
+a.popitem()
+print(a)
+
+print(b.values())
+print(b.fromkeys([1,2,3], 'nothing'))
+print(b.keys())
+c = b.copy()
+print(c)
+c.update(b)
+print(c)
+
+def all_sum(a, b):
+    all_sum = a + b
+    return all_sum
+
+print(all_sum(20, 45))
+
+class A:
+    a = 2
+    b = 8
+
+    @staticmethod
+    def al_sum():
+        print(a + b)
+
+
+
+
