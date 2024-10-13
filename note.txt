@@ -3,4 +3,8 @@ python -m pip install Django
 django-admin startproject mysite .
 python manage.py migrate - створення БД
  python manage.py runserver 8002 - запуск веб-сервера
+ python manage.py startapp blog - створення нового додатку
+
+python manage.py makemigrations blog
+python manage.py migrate blog
 
