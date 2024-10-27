@@ -10,3 +10,17 @@ python manage.py migrate blog
 
 python manage.py createsuperuser - створення адміна
 
+#pip3.6 install --user pythonanywhere
+#pa_autoconfigure_django.py https://github.com/yuriiweblack/start_october.git
+
+(
+bash
+git clone https://github.com/yuriiweblack/start_october.git - скачуємо на машину
+python3 -m venv venv - встановлення віртуального середовища
+pip install -r requirements.txt - встановлення пакетів
+
+WEB - створення пропекту вручну
+
+
+sqlite3
+)
