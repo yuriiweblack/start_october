@@ -2,10 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Post List</title>
+    <title>Django Yurii's blog</title>
 </head>
 <body>
-    <h1>Post List</h1>
+    <div>
+        <h1><a href="/">Django Blog</a></h1>
+    </div>
+
+    {% for post in posts %}
+    <hr>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="#">{{ post.title }}</a></h2>
+        <p>{{ post.text }}</p>
+    {% endfor %}
+
+
+<!--    <div>-->
+<!--        <p>published: 3.10.2024, 6:42</p>-->
+<!--        <h2><a href="#">My first post</a></h2>-->
+<!--        <p>-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--            Accusantium amet cupiditate dolor in inventore ipsa labore laboriosam magni nesciunt-->
+<!--            nulla obcaecati optio placeat possimus sapiente sed, tempore ullam, veniam. Tenetur!-->
+<!--        </p>-->
+<!--    </div>-->
+<!--    <hr>-->
+<!--    <div>-->
+<!--        <p>published: 3.10.2024, 6:52</p>-->
+<!--        <h2><a href="#">My second post</a></h2>-->
+<!--        <p>-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--            Accusantium amet cupiditate dolor in inventore ipsa labore laboriosam magni nesciunt-->
+<!--            nulla obcaecati optio placeat possimus sapiente sed, tempore ullam, veniam. Tenetur!-->
+<!--        </p>-->
+<!--    </div>-->
 
 </body>
 </html>

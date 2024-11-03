@@ -24,3 +24,17 @@ WEB - створення пропекту вручну
 
 sqlite3
 )
+
+
+ Post.objects.all()
+ Post.objects.create(author=admin, title="My TANK", text="Lorem ipsum dolor sit amet, consectetur adipisicing elit.")
+from django.contrib.auth.models import User
+ User.objects.all()
+ admin = User.objects.get(username='admin')
+Post.objects.filter(title__contains='M1')
+post = Post.objects.get(title="My TANK")
+ post.publish()
+Post.objects.order_by('-created_date')
+from django.utils import timezone
+ Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+
