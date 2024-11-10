@@ -1,41 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Django Yurii's blog</title>
-</head>
-<body>
-    <div>
-        <h1><a href="/">Django Blog</a></h1>
-    </div>
+{% extends 'blog/base.html' %}
+
+{% block content %}
 
     {% for post in posts %}
-    <hr>
-        <p>published: {{ post.published_date }}</p>
-        <h2><a href="#">{{ post.title }}</a></h2>
-        <p>{{ post.text }}</p>
+        <hr>
+        <p class="text-center text-primary">published: {{ post.published_date }}</p>
+        <h2><a class="lobster-regular" href="#">{{ post.title }}</a></h2>
+        <p class="">{{ post.text }}</p>
     {% endfor %}
 
+{% endblock %}
 
-<!--    <div>-->
-<!--        <p>published: 3.10.2024, 6:42</p>-->
-<!--        <h2><a href="#">My first post</a></h2>-->
-<!--        <p>-->
-<!--            Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-<!--            Accusantium amet cupiditate dolor in inventore ipsa labore laboriosam magni nesciunt-->
-<!--            nulla obcaecati optio placeat possimus sapiente sed, tempore ullam, veniam. Tenetur!-->
-<!--        </p>-->
-<!--    </div>-->
-<!--    <hr>-->
-<!--    <div>-->
-<!--        <p>published: 3.10.2024, 6:52</p>-->
-<!--        <h2><a href="#">My second post</a></h2>-->
-<!--        <p>-->
-<!--            Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-<!--            Accusantium amet cupiditate dolor in inventore ipsa labore laboriosam magni nesciunt-->
-<!--            nulla obcaecati optio placeat possimus sapiente sed, tempore ullam, veniam. Tenetur!-->
-<!--        </p>-->
-<!--    </div>-->
-
-</body>
-</html>
