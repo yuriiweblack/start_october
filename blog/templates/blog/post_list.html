@@ -5,7 +5,7 @@
     {% for post in posts %}
         <hr>
         <p class="text-center text-primary">published: {{ post.published_date }}</p>
-        <h2><a class="lobster-regular" href="#">{{ post.title }}</a></h2>
+        <h2><a class="lobster-regular" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
         <p class="">{{ post.text }}</p>
     {% endfor %}
 
