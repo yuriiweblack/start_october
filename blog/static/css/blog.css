@@ -17,6 +17,13 @@ body {
 
 .nav-top{
     margin-top: 15px;
+    align-items: center;
+}
+
+.container-fluid1 ul{
+    display: flex;
+
+    background-color: red;
 }
 
 .page-header{
